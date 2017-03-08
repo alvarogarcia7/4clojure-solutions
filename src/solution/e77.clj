@@ -4,4 +4,4 @@
           (generate-equivalences [coll] (map (fn [word] (filter
                              (fn [word-] (anagram?
                                word word-)) coll)) coll))]
-    (into #{} (map (fn [coll] (into #{} coll)) (only-anagrams (generate-equivalences initial))))))
+    (into #{} (map #(into #{} %) (only-anagrams (generate-equivalences initial))))))
