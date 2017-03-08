@@ -1,12 +1,7 @@
 (ns solution.e70
-   (:require [clojure.test :refer :all]))
+   (:require [solution.common :refer :all]))
 
-(defn iss [& forms]
-   (doall (map #(is %) forms)))
-
-(defn __ [args] ((load-file "src/solution/e70.clj") args))
-
-(deftest canary (= true true))
+(def __ (file- "e70"))
 
 (iss
    (= (__ "Have a nice day.")
