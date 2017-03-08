@@ -4,6 +4,6 @@
 (defn iss [& forms]
   (doall (map #(is %) forms)))
 
-(defn file- [filename] (load-file (str "src/solution/" filename ".clj")))
+(defn read-source-file [filename] (load-file (str "src/solution/" filename ".clj")))
 
 (deftest canary (= true true))

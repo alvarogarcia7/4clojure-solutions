@@ -1,7 +1,7 @@
 (ns solution.e70
    (:require [solution.common :refer :all]))
 
-(def __ (file- "e70"))
+(def __ (read-source-file "e70"))
 
 (iss
    (= (__ "Have a nice day.")
