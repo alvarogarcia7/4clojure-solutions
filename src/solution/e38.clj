@@ -1,3 +1,4 @@
 (fn
   [& rest]
-  (reduce #(if (> % %2) % %2) rest))
+  (letfn [(greatest [a b] (if (> a b) a b))]
+    (reduce greatest rest)))
