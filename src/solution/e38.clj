@@ -1,3 +1,3 @@
 (fn
-  [& coll]
-  (reduce #(if (> % %2) % %2) (first coll) coll))
+  [& rest]
+  (reduce #(if (> % %2) % %2) (first rest) rest))
