@@ -1,8 +1,8 @@
 (fn
   [coll]
-  (reduce (fn
+  (letfn [(add-if-not-present
             [acc ele]
             (if (nil? (some #{ele} acc))
               (conj acc ele)
-              acc))
-          [] coll))
+              acc))]
+    (reduce add-if-not-present [] coll)))
